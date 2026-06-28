@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+
+<h1>Dashboard Administrativo</h1>
+<p class="text-muted">Resumen general del sistema hospitalario inteligente</p>
+
+<div class="row g-4 mt-2">
+
+    <div class="col-md-3">
+        <div class="card bg-primary text-white">
+            <div class="card-body">
+                <h5>👥 Pacientes</h5>
+                <h1>{{ pacientes }}</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card bg-success text-white">
+            <div class="card-body">
+                <h5>📅 Citas</h5>
+                <h1>{{ citas }}</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card bg-dark text-white">
+            <div class="card-body">
+                <h5>📋 Historiales</h5>
+                <h1>{{ historiales }}</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card bg-danger text-white">
+            <div class="card-body">
+                <h5>⚠ Riesgo Alto</h5>
+                <h1>{{ riesgo }}</h1>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<hr class="my-4">
+
+<div class="card">
+    <div class="card-body">
+        <h4>Accesos rápidos</h4>
+
+        <a href="/agregar_paciente" class="btn btn-primary">Registrar Paciente</a>
+        <a href="/agregar_cita" class="btn btn-success">Agendar Cita</a>
+        <a href="/agregar_historial" class="btn btn-dark">Registrar Historial</a>
+        <a href="/prediccion" class="btn btn-danger">Analizar IA</a>
+        <a href="/reportes" class="btn btn-secondary">
+    Generar Reportes
+</a>
+    </div>
+</div>
+
+{% endblock %}

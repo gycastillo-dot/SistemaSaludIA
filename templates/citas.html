@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+
+<h2>Citas Médicas</h2>
+
+<a href="/agregar_cita"
+class="btn btn-success mb-3">
+
+Nueva Cita
+
+</a>
+
+<table class="table table-bordered">
+
+<tr>
+    <th>ID</th>
+    <th>Paciente</th>
+    <th>Fecha</th>
+    <th>Hora</th>
+    <th>Motivo</th>
+</tr>
+
+{% for c in citas %}
+
+<tr>
+    <td>{{ c.id }}</td>
+    <td>{{ c.paciente }}</td>
+    <td>{{ c.fecha }}</td>
+    <td>{{ c.hora }}</td>
+    <td>{{ c.motivo }}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+{% endblock %}

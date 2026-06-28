@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+
+<h2>Registrar Cita Médica</h2>
+
+<form method="POST">
+
+    <div class="mb-3">
+        <label>Paciente</label>
+        <input class="form-control" name="paciente" required>
+    </div>
+
+    <div class="mb-3">
+        <label>Fecha</label>
+        <input type="date" class="form-control" name="fecha" required>
+    </div>
+
+    <div class="mb-3">
+        <label>Hora</label>
+        <input type="time" class="form-control" name="hora" required>
+    </div>
+
+    <div class="mb-3">
+        <label>Motivo</label>
+        <input class="form-control" name="motivo" required>
+    </div>
+
+    <button class="btn btn-primary">
+        Guardar Cita
+    </button>
+
+</form>
+
+{% endblock %}

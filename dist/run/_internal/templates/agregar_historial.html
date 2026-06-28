@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+
+<h2>Registrar Historial Clínico</h2>
+
+<form method="POST">
+
+    <div class="mb-3">
+        <label>Paciente</label>
+        <input class="form-control" name="paciente" required>
+    </div>
+
+    <div class="mb-3">
+        <label>Fecha</label>
+        <input type="date" class="form-control" name="fecha" required>
+    </div>
+
+    <div class="mb-3">
+        <label>Diagnóstico</label>
+        <textarea class="form-control" name="diagnostico"></textarea>
+    </div>
+
+    <div class="mb-3">
+        <label>Tratamiento</label>
+        <textarea class="form-control" name="tratamiento"></textarea>
+    </div>
+
+    <div class="mb-3">
+        <label>Observaciones</label>
+        <textarea class="form-control" name="observaciones"></textarea>
+    </div>
+
+    <button class="btn btn-success">
+        Guardar Historial
+    </button>
+
+</form>
+
+{% endblock %}

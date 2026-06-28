@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+
+<h2>Historiales Clínicos</h2>
+
+<a href="/agregar_historial" class="btn btn-primary mb-3">
+    Nuevo Historial
+</a>
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Paciente</th>
+        <th>Fecha</th>
+        <th>Diagnóstico</th>
+        <th>Tratamiento</th>
+        <th>Observaciones</th>
+    </tr>
+
+    {% for h in historiales %}
+    <tr>
+        <td>{{ h.id }}</td>
+        <td>{{ h.paciente }}</td>
+        <td>{{ h.fecha }}</td>
+        <td>{{ h.diagnostico }}</td>
+        <td>{{ h.tratamiento }}</td>
+        <td>{{ h.observaciones }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

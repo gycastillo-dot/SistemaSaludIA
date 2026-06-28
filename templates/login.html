@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+
+<div class="login-page">
+
+    <div class="login-box">
+
+        <div class="login-logo">
+            🫀
+        </div>
+
+        <h1>Virgen <span>del Carmen</span></h1>
+
+        <h4>Centro Médico Inteligente</h4>
+
+        <p class="login-subtitle">
+            Prevención • Cuidado • Inteligencia
+        </p>
+
+        <hr>
+
+        <h5>Iniciar sesión</h5>
+
+        {% if error %}
+        <div class="alert alert-danger">
+            {{ error }}
+        </div>
+        {% endif %}
+
+        <form method="POST">
+
+            <div class="input-group mb-3">
+                <span class="input-group-text">👤</span>
+                <input type="text" name="usuario" class="form-control" placeholder="Usuario" required>
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text">🔒</span>
+                <input type="password" name="password" class="form-control" placeholder="Contraseña" required>
+            </div>
+
+            <button class="btn btn-primary w-100 login-btn">
+                Ingresar
+            </button>
+
+        </form>
+
+        <p class="secure-text">
+            🛡️ Acceso seguro
+        </p>
+
+    </div>
+
+</div>
+
+{% endblock %}

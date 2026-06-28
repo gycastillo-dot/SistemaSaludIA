@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+
+<h2>Predicción de Diabetes</h2>
+
+<form method="POST">
+
+    <div class="mb-3">
+        <label>Paciente</label>
+        <select name="paciente_id" class="form-control" required>
+            <option value="">Seleccione un paciente</option>
+
+            {% for p in pacientes %}
+            <option value="{{ p.id }}">
+                {{ p.nombre }} - {{ p.edad }} años
+            </option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label>Edad</label>
+        <input type="number" class="form-control" name="edad" required>
+    </div>
+
+    <div class="mb-3">
+        <label>Glucosa</label>
+        <input type="number" class="form-control" name="glucosa" required>
+    </div>
+
+    <div class="mb-3">
+        <label>Presión</label>
+        <input type="number" class="form-control" name="presion" required>
+    </div>
+
+    <div class="mb-3">
+        <label>IMC</label>
+        <input type="number" step="0.1" class="form-control" name="imc" required>
+    </div>
+
+    <button class="btn btn-danger">
+        Analizar Riesgo
+    </button>
+
+</form>
+
+{% if error %}
+<div class="alert alert-danger mt-3">
+    {{ error }}
+</div>
+{% endif %}
+
+{% if resultado %}
+<div class="alert alert-warning mt-3">
+    {{ resultado }}
+</div>
+{% endif %}
+
+{% endblock %}

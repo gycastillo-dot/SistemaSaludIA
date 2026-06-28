@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+
+<div class="container">
+
+    <h2 class="mb-4">📄 Centro de Reportes</h2>
+
+    <div class="row">
+
+        <div class="col-md-4 mb-3">
+            <div class="card shadow">
+                <div class="card-body text-center">
+
+                    <h4>👨‍⚕️ Pacientes</h4>
+
+                    <p>Generar listado completo de pacientes registrados.</p>
+
+                    <a href="/reporte_pacientes" class="btn btn-primary">
+                        Descargar PDF
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <div class="card shadow">
+                <div class="card-body text-center">
+
+                    <h4>📅 Citas</h4>
+
+                    <p>Generar listado de citas médicas.</p>
+
+                    <a href="/reporte_citas" class="btn btn-success">
+                        Descargar PDF
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <div class="card shadow">
+                <div class="card-body text-center">
+
+                    <h4>🚨 Riesgo Alto</h4>
+
+                    <p>Pacientes clasificados con riesgo alto.</p>
+
+                    <a href="/reporte_riesgo_alto" class="btn btn-danger">
+                        Descargar PDF
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

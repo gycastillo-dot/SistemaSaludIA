@@ -1,0 +1,197 @@
+/* ==========================
+   ESTILO GENERAL
+========================== */
+
+body {
+    background: #f4f7fb;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card {
+    border: none;
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.15);
+}
+
+.btn {
+    border-radius: 10px;
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+}
+
+.table {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* ==========================
+   LOGIN CON FONDO
+========================== */
+
+.login-page {
+    min-height: 100vh;
+
+    background-image:
+        linear-gradient(rgba(0,60,120,.45), rgba(0,60,120,.45)),
+        url("../img/fondo_salud.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+}
+
+.login-box {
+    width: 430px;
+    background: rgba(255,255,255,.20);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    border-radius: 25px;
+    padding: 40px;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,.35);
+
+    color: white;
+    text-align: center;
+}
+
+.login-logo {
+    width: 90px;
+    height: 90px;
+
+    margin: 0 auto 20px auto;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 45px;
+    background: white;
+}
+
+.login-box h1,
+.login-box h2,
+.login-box h3,
+.login-box h4,
+.login-box h5,
+.login-box p {
+    color: white;
+}
+
+.login-box h1 {
+    font-size: 55px;
+    font-weight: bold;
+}
+
+.login-box h1 span {
+    color: #00d1c1;
+}
+
+.login-subtitle {
+    font-weight: bold;
+}
+
+.login-box input {
+    height: 50px;
+}
+
+.login-btn {
+    height: 55px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* ==========================
+   MODO OSCURO
+========================== */
+
+body.modo-oscuro {
+    background: #111827 !important;
+    color: #ffffff !important;
+}
+
+body.modo-oscuro .container,
+body.modo-oscuro .container-fluid {
+    color: white;
+}
+
+body.modo-oscuro .card {
+    background: #1f2937 !important;
+    color: white !important;
+}
+
+body.modo-oscuro .card-body {
+    color: white !important;
+}
+
+body.modo-oscuro table {
+    background: #1f2937 !important;
+    color: white !important;
+}
+
+body.modo-oscuro .table {
+    color: white !important;
+}
+
+body.modo-oscuro th,
+body.modo-oscuro td {
+    background: #1f2937 !important;
+    color: white !important;
+    border-color: #374151 !important;
+}
+
+body.modo-oscuro input,
+body.modo-oscuro textarea,
+body.modo-oscuro select {
+    background: #374151 !important;
+    color: white !important;
+    border: 1px solid #6b7280 !important;
+}
+
+body.modo-oscuro input::placeholder {
+    color: #d1d5db;
+}
+
+body.modo-oscuro .navbar {
+    background: #0f172a !important;
+}
+
+body.modo-oscuro .btn-light {
+    background: #374151;
+    color: white;
+    border: none;
+}
+
+body.modo-oscuro .btn-light:hover {
+    background: #4b5563;
+}
+
+body.modo-oscuro .btn-warning {
+    color: black;
+}
+
+body.modo-oscuro .alert {
+    color: white;
+}
+
+body.modo-oscuro h1,
+body.modo-oscuro h2,
+body.modo-oscuro h3,
+body.modo-oscuro h4,
+body.modo-oscuro h5,
+body.modo-oscuro h6,
+body.modo-oscuro p,
+body.modo-oscuro label {
+    color: white !important;
+}
