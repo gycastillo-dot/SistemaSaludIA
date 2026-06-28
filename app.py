@@ -5,7 +5,7 @@ import joblib
 from flask import Flask, render_template, request, redirect, session, send_file
 from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
-from sqlalchemy import false
+
 
 from database.conexion import db
 from models.paciente import Paciente
