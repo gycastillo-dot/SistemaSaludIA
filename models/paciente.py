@@ -4,6 +4,7 @@ class Paciente(db.Model):
     __tablename__ = "pacientes"
 
     id = db.Column(db.Integer, primary_key=True)
+    cedula = db.Column(db.String(20), unique=True)
     nombre = db.Column(db.String(100), nullable=False)
     edad = db.Column(db.Integer)
     sexo = db.Column(db.String(20))

@@ -101,6 +101,7 @@ def agregar_paciente():
 
     if request.method == 'POST':
         nuevo = Paciente(
+            cedula=request.form['cedula'],
             nombre=request.form['nombre'],
             edad=request.form['edad'],
             sexo=request.form['sexo'],
